@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,11 @@
     <link rel="stylesheet" href="estilos.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Pagina web con JavaScript</title>
 </head>
+
 <body>
     <header class="header" id="inicio" style="height: 100vh;
     background-image: linear-gradient(to top, rgba(47, 208, 208, 0.5) 0%, rgba(51, 8, 103, 0.5) 100%),url(img/sirisvisual-6YkFSssmKws-unsplash.jpg);
@@ -20,34 +23,58 @@
         <img src="img/hamburguesa.svg" alt="" class="hamburguesa" id="menu">
         <nav class="menu-navegacion" id="nav">
             <a href="#inicio">inicio</a>
-            <a href="#servicio">servicio</a>
+            <a href="#servicio">Certificacion</a>
             <a href="#portafolio">portafolio</a>
-            <a href="#expertos">expertos</a> 
+            <a href="#expertos">expertos</a>
             <a href="#contacto">contacto</a>
         </nav>
         <div class="contenedor head">
             <h1 class="titulo">Convierte tus sueños en realidad</h1>
             <p class="copy">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
         </div>
-    </header> 
+    </header>
     <main>
         <section class="contenedor" id="servicio">
-            <h2 class="subtitulo">Nuestro Servicio</h2>
-            <div class="contenedor-servicio">
-                <img src="img/3D Model_Isometric.png" alt="">
-                <div class="checklist-servicio">
+            <h2 class="subtitulo">Certificación del ingeniero civil</h2>
+            <div
+                class="contenedor-servicio grid sm:grid-cols-1 md:grid-cols-2 items-center justify-center content-center">
+                <img src="img/undraw_certificate_re_yadi.svg" alt="Certificacion" class="max-w-xs">
+                <div class="checklist-servicio w-full">
                     <div class="service">
-                        <h3 class="n-service"><span class="number">1</span>Lorem, ipsum.</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nam dolorum praesentium quae distinctio minima ipsa velit, necessitatibus neque qui?</p>
+                        <p class="text-sm text-gray-700 font-semibold tracking-normal leading-relaxed py-2">
+                            La certificación es una herramienta para validar el dominio y conocimiento de una materia,
+                            una tecnología o un conjunto de competencias. Actúa como una credencial tangible que
+                            demuestra que un individuo ha cumplido con un conjunto definido de criterios y estándares
+                            establecidos por una autoridad reconocida en el campo. Esto significa que ha adquirido, a
+                            través de estudios formales o experiencia laboral, un nivel de experiencia y habilidad que
+                            es reconocido y valorado en la industria.
+                        </p>
                     </div>
                     <div class="service">
-                        <h3 class="n-service"><span class="number">2</span>Lorem, ipsum.</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nam dolorum praesentium quae distinctio minima ipsa velit, necessitatibus neque qui?</p>
+                        <h3 class="n-service"><span class="number">1</span>¿Quien realiza la certificación al Ingeniero
+                            Civil?</h3>
+                        <p>En México el CICM es quien realiza las certificaciones a los ingenieros civiles, esta
+                            asociación realiza múltiples pruebas para comprobar que el ingeniero esté realmente
+                            capacitado para obtener su certificado.
+                        </p>
                     </div>
                     <div class="service">
-                        <h3 class="n-service"><span class="number">3</span>Lorem, ipsum.</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nam dolorum praesentium quae distinctio minima ipsa velit, necessitatibus neque qui?</p>
+                        <h3 class="n-service"><span class="number">2</span>¿Qué es el CICM?</h3>
+                        <p>El colegio de ingenieros civiles de México es una asociación civil, la cual tiene por objeto
+                            asegurar el ejercicio profesional de la ingeniería civil en México se realice en el más alto
+                            plano legal, ético y moral.
+                        </p>
+                        <div class="w-full flex justify-center items-center py-6">
+                            <div id="infoToggle"
+                                class="animate-bounce shadow-lg rounded-full flex items-center justify-center">
+                                <img src="https://img.icons8.com/ios/54/circled-chevron-down.png"
+                                    alt="circled-chevron-down" class="chevron" />
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="container-cer flex justify-center w-full col-span-2 sm:col-span-1 md:col-span-2">
+
                 </div>
             </div>
         </section>
@@ -97,17 +124,78 @@
                     <i class='bx bxl-facebook'></i>
                 </a>
                 <a href="./" class="social-media-icon">
-                    <i class='bx bxl-twitter' ></i>
+                    <i class='bx bxl-twitter'></i>
                 </a>
                 <a href="./" class="social-media-icon">
-                    <i class='bx bxl-instagram-alt' ></i>
+                    <i class='bx bxl-instagram-alt'></i>
                 </a>
             </div>
         </div>
         <div class="line"></div>
     </footer>
 
+    <template id="template-certificacion">
+        <div class="bg-white p-6 rounded-lg shadow-lg max-w-5xl">
+            <div class="flex items-center">
+                <img src="https://congresonacionaldeingenieriacivil.mx/test_cicm/logos/logo_cicm.png"
+                    alt="Colegio de ingeniero de Mexico" class="max-w-xs">
+            </div>
+            <h3 class="text-2xl font-bold mb-4 my-4">Convocatoria 2023</h3>
+
+            <div class="py-4">
+                <p class="text-sm text-gray-700 mb-4">
+                    En su versión más reciente la convocatoria para obtener certificación profesional de ingeniero civil
+                    pide entre sus requisitos más destacados:
+                <ul class="list-disc list-inside">
+                    <li>Constancia o carta de recomendación de haber trabajado bajo tutela o dirección de un ingeniero
+                        civil
+                        certificado.</li>
+                    <li>Documento que demuestren haber ejercido la ingeniería civil en cualquiera de sus ramas durante
+                        al
+                        menos 5 años.</li>
+                    <li>Referencias de al menos 3 peritos profesionales en alguna especialidad, ingenieros civiles
+                        certificados o ingenieros civiles distinguidos.</li>
+                </ul>
+                </p>
+                <a href="https://cicm.org.mx/wp-content/files_mf/convocatoria2023mod1.pdf"
+                    class="text-blue-500 underline mb-4">Convocatoria 2023</a>
+            </div>
+
+            <div class="py-4">
+                <h4 class="text-xl font-bold mb-4">Cuota para cubrir los costos del proceso</h4>
+                <p class="text-sm text-gray-700 mb-4">
+                    Hay cuotas para socios del CICM que es de $4,872.00 incluyendo IVA y para no socios de $6,380.00
+                    incluyendo IVA y
+                    en caso de alguna apelación se tiene que pagar una cuota adicional de $1,740.00 incluyendo IVA para
+                    revisión de examen.
+                    Estas cuotas pueden ser pagadas mediante efectivo o medios electrónicos, en el siguiente archivo se
+                    muestran la cuenta bancaria a la que debe de ser depositado.
+                </p>
+                <a href="https://cicm.org.mx/wp-content/files_mf/cuotaicc2023.pdf"
+                    class="text-blue-500 underline mb-4">Información sobre cuotas</a>
+            </div>
+
+            <div class="py-4">
+                <h5 class="text-xl font-bold mb-4">Guía para certificación de ingenieros civiles</h5>
+                <p class="text-sm text-gray-700 mb-4">
+                    El CICM proporciona una guía en la cual incluye un instructivo de como se deben de entregar la
+                    documentación para poder participar en el concurso, de los temarios que abarca el examen para la
+                    certificación, estos temarios están seccionados en cada una de las áreas, y son temas que el
+                    aspirante
+                    debe de manejar a la perfección, así mismo también incluye ejemplos de los tipos de preguntas con
+                    las
+                    que cuenta el examen, es de primordial importancia revisar a detalle este archivo para los
+                    aspirantes a
+                    certificación.
+                </p>
+                <a href="https://cicm.org.mx/wp-content/files_mf/guiaingenieroscivilcertificadoactualizada2023.pdf"
+                    class="text-blue-500 underline">Guía para certificación</a>
+            </div>
+        </div>
+    </template>
+
     <script src="main.js"></script>
     <script src="lightbox.js"></script>
 </body>
+
 </html>
