@@ -39,13 +39,28 @@ document.getElementById('infoToggle').addEventListener('click', function () {
         let template_certificacion = document.getElementById('template-certificacion');
         let clone_cer = template_certificacion.content.cloneNode(true);
         document.querySelector('.container-cer').appendChild(clone_cer);
-        document.querySelector('.chevron').setAttribute('src', 'https://img.icons8.com/pastel-glyph/54/circled-chevron-up.png');
+        document.querySelector('.chevron').setAttribute('src', 'https://img.icons8.com/pastel-glyph/50/circled-chevron-up.png');
     } else {
         document.querySelector('.container-cer').innerHTML = '';
-        document.querySelector('.chevron').setAttribute('src', 'https://img.icons8.com/ios/54/circled-chevron-down.png');
+        document.querySelector('.chevron').setAttribute('src', 'https://img.icons8.com/ios/50/circled-chevron-down.png');
     }
 
     document.querySelector('.container-cer').classList.toggle('show');
+});
+
+document.getElementById('infoToggle_acerdi').addEventListener('click', function () {
+
+    if (!document.querySelector('.container-acre').classList.contains('show')) {
+        let template_certificacion = document.getElementById('template-acreditacion');
+        let clone_cer = template_certificacion.content.cloneNode(true);
+        document.querySelector('.container-acre').appendChild(clone_cer);
+        document.querySelector('.chevron_acre').setAttribute('src', 'https://img.icons8.com/pastel-glyph/50/circled-chevron-up.png');
+    } else {
+        document.querySelector('.container-acre').innerHTML = '';
+        document.querySelector('.chevron_acre').setAttribute('src', 'https://img.icons8.com/ios/50/circled-chevron-down.png');
+    }
+
+    document.querySelector('.container-acre').classList.toggle('show');
 });
 
 

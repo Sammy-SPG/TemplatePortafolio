@@ -92,6 +92,8 @@ body{
 .contenedor-servicio{
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-content: center;
+    align-items: center;
     grid-gap: 6px;
     justify-items: center;
 }
